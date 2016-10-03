@@ -67,7 +67,7 @@
     <Compile Include="Extensions\OwinResponseExtensions.cs" />
     <Compile Include="Middleware\Logger.cs" />
     <Compile Include="Middleware\SimpleRouter.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

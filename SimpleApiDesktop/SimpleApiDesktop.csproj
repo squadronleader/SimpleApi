@@ -118,10 +118,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OwinApp\SimpleApi.csproj">
-      <Project>{35cc93ee-21f7-41e4-80a5-718a72dfe1ef}</Project>
-      <Name>SimpleApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SimpleApiServer\SimpleApiServer.csproj">
       <Project>{f5749a40-0799-4c45-9322-3287d84ac383}</Project>
       <Name>SimpleApiServer</Name>

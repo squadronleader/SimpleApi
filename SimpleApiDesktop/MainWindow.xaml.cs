@@ -27,7 +27,7 @@ namespace SimpleApiDesktop
         public MainWindow()
         {
             InitializeComponent();
-            var server = SimpleApiServer.Program.Start();
+            var server = SimpleApiServer.Server.Start();
 
            
 

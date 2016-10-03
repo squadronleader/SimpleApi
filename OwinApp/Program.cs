@@ -1,11 +1,9 @@
-﻿using Microsoft.Owin.Hosting;
-using System;
+﻿using System;
 using System.Threading;
 using System.Configuration;
-using SimpleApi.Extensions;
 using System.Collections.Generic;
 
-namespace SimpleApi
+namespace SimpleApi.Console
 {
 	public class Program
 	{
@@ -13,19 +11,16 @@ namespace SimpleApi
 
 		static void Main(string[] args)
 		{
-            //setup app defaults
-            var port = ConfigurationManager.AppSettings.Get("port").ToIntOrDefault(Defaults.Port);
-
-			Console.CancelKeyPress += (sender, eArgs) =>
+			System.Console.CancelKeyPress += (sender, eArgs) =>
 			{
 				_quitEvent.Set();
 				eArgs.Cancel = true;
 			};
 
             //start new owin web server
-			using (WebApp.Start<Startup>(string.Format("http://*:{0}", port)))
+			using (SimpleApiServer.Server.Start())
 			{
-				Console.WriteLine(string.Format("Started Server on port: {0}",port));
+				System.Console.WriteLine(string.Format("Started Server"));
 				_quitEvent.WaitOne();
 			}
 		}
