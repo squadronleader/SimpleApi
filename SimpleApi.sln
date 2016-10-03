@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{82A95A
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApiDesktop", "SimpleApiDesktop\SimpleApiDesktop.csproj", "{2DF8A930-3804-44D4-9657-48FCB22FA6EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApiServer", "SimpleApiServer\SimpleApiServer.csproj", "{F5749A40-0799-4C45-9322-3287D84AC383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,14 @@ Global
 		{35CC93EE-21F7-41E4-80A5-718A72DFE1EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35CC93EE-21F7-41E4-80A5-718A72DFE1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35CC93EE-21F7-41E4-80A5-718A72DFE1EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF8A930-3804-44D4-9657-48FCB22FA6EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF8A930-3804-44D4-9657-48FCB22FA6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF8A930-3804-44D4-9657-48FCB22FA6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF8A930-3804-44D4-9657-48FCB22FA6EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5749A40-0799-4C45-9322-3287D84AC383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5749A40-0799-4C45-9322-3287D84AC383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5749A40-0799-4C45-9322-3287D84AC383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5749A40-0799-4C45-9322-3287D84AC383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

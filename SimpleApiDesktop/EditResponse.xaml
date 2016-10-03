@@ -1,0 +1,32 @@
+﻿<Window x:Class="SimpleApiDesktop.EditResponse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleApiDesktop"
+        mc:Ignorable="d"
+        Title="EditResponse" Height="452.778" Width="434.259">
+    <Grid Margin="10,10,2,10">
+        <Button x:Name="Create" Content="Create" HorizontalAlignment="Left" Margin="329,352,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="Create_Click"/>
+        <Grid HorizontalAlignment="Left" Height="332" VerticalAlignment="Top" Width="414" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Url"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Headers"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Content Type"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Body   "/>
+            <TextBox x:Name="Url" Grid.Row="0" Grid.Column="1" Width="200" />
+            <TextBox x:Name="Headers" Grid.Row="1" Grid.Column="1" Width="200" />
+            <TextBox x:Name="ContentType" Grid.Row="2" Grid.Column="1" Width="200" />
+            <TextBox x:Name="Body" Grid.Row="3" Grid.Column="1" Margin="1,0,-102,-214" />
+        </Grid>
+    </Grid>
+</Window>
