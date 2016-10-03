@@ -58,7 +58,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleApiServer\SimpleApi.Server.csproj">
+    <ProjectReference Include="..\SimpleApi.Server\SimpleApi.Server.csproj">
       <Project>{f5749a40-0799-4c45-9322-3287d84ac383}</Project>
       <Name>SimpleApi.Server</Name>
     </ProjectReference>
