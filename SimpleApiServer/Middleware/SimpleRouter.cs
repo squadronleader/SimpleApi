@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
-using SimpleApiServer.Extensions;
+using SimpleApi.Server.Extensions;
 
 
 /// <summary>
 /// This class represents a simple own middleware component that uses json config files to respond to requests.
 /// You can create a new route and response by simply adding a new .json file to the /Content folder. See HelloWorld.json for and example
 /// </summary>
-namespace SimpleApiServer.Middleware
+namespace SimpleApi.Server.Middleware
 {
     public class SimpleRouter : OwinMiddleware
     {

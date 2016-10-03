@@ -1,4 +1,4 @@
-﻿using SimpleApiServer;
+﻿using SimpleApi.Server;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace SimpleApiDesktop
+namespace SimpleApi.Desktop
 {
     public class Common
     {

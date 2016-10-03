@@ -17,7 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SimpleApiDesktop
+namespace SimpleApi.Desktop
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,7 +27,7 @@ namespace SimpleApiDesktop
         public MainWindow()
         {
             InitializeComponent();
-            var server = SimpleApiServer.Server.Start();
+            var server = SimpleApi.Server.Server.Start();
 
            
 

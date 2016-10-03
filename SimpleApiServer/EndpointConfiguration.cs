@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleApiServer
+namespace SimpleApi.Server
 {
     public class EndpointConfiguration
     {

@@ -2,11 +2,11 @@
 using System;
 using System.Threading;
 using System.Configuration;
-using SimpleApiServer.Extensions;
+using SimpleApi.Server.Extensions;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace SimpleApiServer
+namespace SimpleApi.Server
 {
 	public class Server
 	{

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SimpleApiDesktop
+namespace SimpleApi.Desktop
 {
     /// <summary>
     /// Interaction logic for EditResponse.xaml
@@ -28,7 +28,7 @@ namespace SimpleApiDesktop
 
         private void Create_Click(object sender, RoutedEventArgs e)
         {
-            var endpoint = new SimpleApiServer.EndpointConfiguration
+            var endpoint = new SimpleApi.Server.EndpointConfiguration
             {
                 Url = this.Url.Text,
                 ContentType = this.ContentType.Text,

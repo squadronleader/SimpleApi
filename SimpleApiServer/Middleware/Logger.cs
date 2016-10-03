@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleApiServer.Middleware
+namespace SimpleApi.Server.Middleware
 {
     public class Logger : OwinMiddleware
     {

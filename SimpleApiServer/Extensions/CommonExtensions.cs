@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleApiServer.Extensions
+namespace SimpleApi.Server.Extensions
 {
     public static class CommonExtensions
     {

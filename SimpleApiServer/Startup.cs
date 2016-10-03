@@ -1,7 +1,7 @@
 ﻿using Owin;
-using SimpleApiServer.Middleware;
+using SimpleApi.Server.Middleware;
 
-namespace SimpleApiServer
+namespace SimpleApi.Server
 {
 	public class Startup
 	{

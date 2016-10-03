@@ -18,7 +18,7 @@ namespace SimpleApi.Console
 			};
 
             //start new owin web server
-			using (SimpleApiServer.Server.Start())
+			using (SimpleApi.Server.Server.Start())
 			{
 				System.Console.WriteLine(string.Format("Started Server"));
 				_quitEvent.WaitOne();

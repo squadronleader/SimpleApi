@@ -12,9 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{82A95A
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApiDesktop", "SimpleApiDesktop\SimpleApiDesktop.csproj", "{2DF8A930-3804-44D4-9657-48FCB22FA6EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApi.Desktop", "SimpleApiDesktop\SimpleApi.Desktop.csproj", "{2DF8A930-3804-44D4-9657-48FCB22FA6EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApiServer", "SimpleApiServer\SimpleApiServer.csproj", "{F5749A40-0799-4C45-9322-3287D84AC383}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApi.Server", "SimpleApiServer\SimpleApi.Server.csproj", "{F5749A40-0799-4C45-9322-3287D84AC383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
