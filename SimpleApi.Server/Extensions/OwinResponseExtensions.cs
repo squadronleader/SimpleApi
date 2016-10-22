@@ -11,6 +11,8 @@ namespace SimpleApi.Server.Extensions
     {
         public static void AddHeaders(this OwinResponse response, Dictionary<string,string> headers)
         {
+            if(headers == null) { return; }
+
             foreach (var header in headers)
             {
                 //Note add keys lower case as url is case insenstive
