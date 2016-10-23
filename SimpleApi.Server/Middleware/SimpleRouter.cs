@@ -19,7 +19,7 @@ namespace SimpleApi.Server.Middleware
     {
         private readonly string _basePath;
 
-        private readonly Dictionary<string, EndpointConfiguration> _endpoints = new Dictionary<string, EndpointConfiguration>();
+        private Dictionary<string, EndpointConfiguration> _endpoints = new Dictionary<string, EndpointConfiguration>();
 
         public SimpleRouter(OwinMiddleware next, string basePath) : base(next)
         {
@@ -33,6 +33,12 @@ namespace SimpleApi.Server.Middleware
             var response = context.Response;
 
             var requestPath = request.Path.ToString().ToLower();
+
+            //Special route that allows end user refresh the endpoints
+            if (requestPath == "/reloadendpoints")
+            {
+                RefreshEnpoints(_basePath);
+            }
 
             var endpoint = _endpoints.GetOrDefault(requestPath);
 
@@ -49,6 +55,12 @@ namespace SimpleApi.Server.Middleware
             }
             
             //return Next.Invoke(context);
+        }
+
+        private void RefreshEnpoints(string basePath)
+        {
+            _endpoints = new Dictionary<string, EndpointConfiguration>();
+            SetupEndpoints(basePath);
         }
 
         private void SetupEndpoints(string configurationPath)
