@@ -11,11 +11,12 @@ namespace SimpleApi.Server.Middleware
     {
         public Logger(OwinMiddleware next) : base(next) {}
 
-        public override Task Invoke(OwinRequest request, OwinResponse response)
+        public override Task Invoke(IOwinContext context)
         {
+            var request = context.Request;
             Console.WriteLine(request.Method + " " + request.Uri.ToString());
 
-            return Next.Invoke(request, response);
+            return Next.Invoke(context);
         }
     }
 }

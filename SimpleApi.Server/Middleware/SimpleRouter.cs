@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 using SimpleApi.Server.Extensions;
-
+using System.Web;
 
 /// <summary>
 /// This class represents a simple own middleware component that uses json config files to respond to requests.
@@ -27,31 +27,35 @@ namespace SimpleApi.Server.Middleware
             SetupEndpoints(basePath);
         }
 
-        public override Task Invoke(OwinRequest request, OwinResponse response)
+        public override Task Invoke(IOwinContext context)
         {
-            var requestPath = request.Path.ToLower();
+            var request = context.Request;
+            var response = context.Response;
+
+            var requestPath = request.Path.ToString().ToLower();
 
             var endpoint = _endpoints.GetOrDefault(requestPath);
 
-            if(endpoint != null)
+            if (endpoint != null)
             {
                 response.ContentType = endpoint.ContentType;
                 response.AddHeaders(endpoint.Headers);
-                response.WriteBody(endpoint.Body);
+                return response.WriteAsync(endpoint.Body);
             }
             else
             {
                 response.ContentType = "text/plain";
-                response.WriteBody("Error no endpoint");
+                return response.WriteAsync("Error no endpoint");
             }
-
-            return Next.Invoke(request, response);
+            
+            //return Next.Invoke(context);
         }
-
 
         private void SetupEndpoints(string configurationPath)
         {
-            foreach (string file in Directory.EnumerateFiles(configurationPath, "*.json"))
+            //Using this as Server.MapPath isn't available in owin app.
+            var path = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, configurationPath);
+            foreach (string file in Directory.EnumerateFiles(path, "*.json"))
             {
                 var endpoint = JsonConvert.DeserializeObject<EndpointConfiguration>(File.ReadAllText(file));
                 //endpoint key should be lowercase since its the url and its case insensitive.

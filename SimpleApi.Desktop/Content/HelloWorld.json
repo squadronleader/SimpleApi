@@ -1,8 +1,8 @@
 ﻿{
-  "Body": "{\"token\" : \"dfsds-5dsfd-sdfd-sadfs5-sdwer\"}",
-  "ContentType": "application/json",
+  "Body": "Hello World",
+  "ContentType": "text/plain",
   "Headers": {
-    "key": "value"
+    "Some_key": "some_value"
   },
   "Url": "/HelloWorld"
 }

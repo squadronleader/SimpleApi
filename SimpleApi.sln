@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApi.Desktop", "Simple
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApi.Server", "SimpleApi.Server\SimpleApi.Server.csproj", "{F5749A40-0799-4C45-9322-3287D84AC383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApi.Webhost", "SimpleApi.Webhost\SimpleApi.Webhost.csproj", "{C961C070-4A6D-4B4C-A739-323C0B8D0727}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{F5749A40-0799-4C45-9322-3287D84AC383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5749A40-0799-4C45-9322-3287D84AC383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5749A40-0799-4C45-9322-3287D84AC383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C961C070-4A6D-4B4C-A739-323C0B8D0727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C961C070-4A6D-4B4C-A739-323C0B8D0727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C961C070-4A6D-4B4C-A739-323C0B8D0727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C961C070-4A6D-4B4C-A739-323C0B8D0727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
