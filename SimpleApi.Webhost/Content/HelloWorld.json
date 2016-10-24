@@ -1,8 +1,12 @@
 ﻿{
-  "Body": "Hello World",
-  "ContentType": "text/plain",
-  "Headers": {
-    "Some_key": "some_value"
-  },
-  "Url": "/HelloWorld"
+  "Url": "/HelloWorld",
+  "Responses": [
+    {
+      "Headers": {
+        "Some_key": "some_value"
+      },
+      "Body": "Hello World",
+      "ContentType": "text/plain"
+    }
+  ]
 }

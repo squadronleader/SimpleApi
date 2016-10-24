@@ -30,9 +30,7 @@ namespace SimpleApi.Desktop
         {
             var endpoint = new SimpleApi.Server.EndpointConfiguration
             {
-                Url = this.Url.Text,
-                ContentType = this.ContentType.Text,
-                Body = this.Body.Text
+                Url = this.Url.Text
             };
 
             if (Common.WriteNewFile("new",".json",endpoint))
