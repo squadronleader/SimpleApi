@@ -5,6 +5,7 @@ deploy/*
 *.csproj.user
 *.suo
 *.cache
-*.pubxml.*
+*.pubxml.user
+*.pubxml
 TestResults/
 packages/
