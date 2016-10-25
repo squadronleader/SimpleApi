@@ -70,8 +70,11 @@
     <Compile Include="Defaults.cs" />
     <Compile Include="EndpointConfiguration.cs" />
     <Compile Include="Extensions\CommonExtensions.cs" />
+    <Compile Include="Extensions\OwinRequestExtensions.cs" />
     <Compile Include="Extensions\OwinResponseExtensions.cs" />
+    <Compile Include="Handlers\Json\JsonRequestHandler.cs" />
     <Compile Include="Middleware\Logger.cs" />
+    <Compile Include="Middleware\RouterHandler.cs" />
     <Compile Include="Middleware\SimpleRouter.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

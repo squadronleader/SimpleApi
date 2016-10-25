@@ -20,6 +20,15 @@ namespace SimpleApi.Server.Extensions
             }
         }
 
+        public static async Task WriteBody(this IOwinResponse response, ResponseConfiguration config)
+        {
+            response.ContentType = config.ContentType;
+            response.AddHeaders(config.Headers);
+            response.StatusCode = config.HttpStatus;
+
+            await response.WriteAsync(config.Body);
+        }
+
         public static void WriteBody(this IOwinResponse response, string body)
         {
             var bodyBytes = System.Text.ASCIIEncoding.ASCII.GetBytes(body);

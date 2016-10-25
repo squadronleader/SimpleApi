@@ -36,9 +36,6 @@ namespace SimpleApi.Server.Middleware
 
             var requestPath = request.Path.ToString().ToLower();
 
-
-
-
             //Special route that allows end user refresh the endpoints
             if (requestPath == "/reloadendpoints")
             {
@@ -50,8 +47,8 @@ namespace SimpleApi.Server.Middleware
             if (endpoint != null)
             {
                 var responseConfig = HandleJsonResponse(request, response, endpoint);
-                await WriteResponse(response, responseConfig);
-            }
+                await response.WriteBody(responseConfig);
+            } 
             else
             {
                 var noEndpointResponse = new ResponseConfiguration

@@ -1,0 +1,47 @@
+﻿{
+  "Url": "/Token",
+  "ValidateRequest": {
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      }
+    },
+    "required": ["username", "password"]
+  },  
+  "DefaultResponse": {
+    "HttpCode": 403,
+    "Body": "{\"error\" : \"not valid login\" }",
+    "ContentType": "application/json"
+  },
+  "ErrorResponse": {
+    "HttpCode": 501,
+    "Body": "{\"error\" : \"malformed message\" }",
+    "ContentType": "application/json"
+  },
+  "Responses": [
+    {
+      "Rules": [
+        {
+          "PropertyPath": "username",
+          "Matches" : "nick"
+        }
+      ],
+      "Body": "{\"token\" : \"dfsds-5dsfd-sdfd-sadfs5-sdwer\", \"username\" : \"nick\" }",
+      "ContentType": "application/json"
+    },
+    {
+      "Rules": [
+        {
+          "PropertyPath": "username",
+          "Matches" : "damo"
+        }
+      ],
+      "Body": "{\"token\" : \"dfsds-5dsfd-sdfd-sadfs5-sdwer\", \"username\" : \"damo\" }",
+      "ContentType": "application/json"
+    }
+  ]
+}

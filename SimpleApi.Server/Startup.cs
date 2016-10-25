@@ -1,5 +1,7 @@
 ﻿using Owin;
+using SimpleApi.Server.Handlers.Json;
 using SimpleApi.Server.Middleware;
+using System.Collections.Generic;
 
 namespace SimpleApi.Server
 {
@@ -8,7 +10,10 @@ namespace SimpleApi.Server
 		public void Configuration(IAppBuilder app)
 		{
             app.Use(typeof(Logger));
-            app.Use(typeof(SimpleRouter), "Content");
+           // app.Use(typeof(SimpleRouter), "Content");
+            app.Use(typeof(RouterHandler),
+                new List<IRequestHandler> { new JsonRequestHandler() },
+                "Content");
 		}
 	}
 }
