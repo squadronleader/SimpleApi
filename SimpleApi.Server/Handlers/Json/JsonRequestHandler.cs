@@ -35,7 +35,7 @@ namespace SimpleApi.Server.Handlers.Json
             //Testing reading body. Note can only read body once. So copy instead.
             try
             {
-                var bodyString = request.ReadBody()
+                var bodyString = request.ReadBody();
                 var jsonObj = JObject.Parse(bodyString);
 
                 //If user has setup request validation then check here
